@@ -1,0 +1,56 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Kmeans_Class {
+    - cluster_num: int
+    - centroids: list
+    - iter_num: int
+    - needed_error: float
+    - error_real: float
+    - if_loopStopCond_is_numOfIters: bool
+    - if_loopStopCond_is_error_between_centroids: bool
+
+    + __init__(cluster_num, centroids, if_loopStopCond_is_numOfIters=False, if_loopStopCond_is_error_between_centroids=False, iter_num=5, needed_error=0.1)
+    + datapoint_centroids_distance(X, centroids): list
+    + old_new_c_distance(old, new)
+    + make_clusters(X)
+    + label_clusters(all_centroids): list
+    + predict_if_churn(datapoint, all_centroids, X): str
+}
+
+class GUI_ChurnPredictor {
+    + __init__()
+    + initUI()
+    + predict_churn()
+}
+
+class QWidget {
+}
+
+class QVBoxLayout {
+}
+
+class QLabel {
+}
+
+class QLineEdit {
+}
+
+class QPushButton {
+}
+
+class QComboBox {
+}
+
+class QMessageBox {
+}
+
+GUI_ChurnPredictor --|> QWidget
+GUI_ChurnPredictor --> QVBoxLayout
+GUI_ChurnPredictor --> QLabel
+GUI_ChurnPredictor --> QLineEdit
+GUI_ChurnPredictor --> QPushButton
+GUI_ChurnPredictor --> QComboBox
+GUI_ChurnPredictor --> QMessageBox
+GUI_ChurnPredictor --> Kmeans_Class : uses
+@enduml
