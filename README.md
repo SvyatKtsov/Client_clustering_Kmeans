@@ -19,4 +19,16 @@ Example:
 
 
 ## Cluters' Visualization 
+In this section, the first and fifth iterations' visualizations are presented.
 
+<p align="center">
+  <img src="first_iter_visualization_.jpg" width="400" height="280"><br>
+  First iteration
+</p>
+
+<p align="center">
+  <img src="fifth_iter_visualization_.jpg" width="400" height="280"><br>
+  Fifth iteration
+</p>
+
+As far as we can see, it took the K-means algorithm 4 iterations to 'optimize' the second cluster (Cluster 1).
